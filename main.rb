@@ -216,8 +216,6 @@ INITIATE_VARIABLES()
 # This only changes the "speed" variables, and does not move the heart. The heart is moved according to these variables in the update function.
 
 def updateSpeed()
-    p @keysHeld
-
     @x_speed = 0 # Set the 
     @y_speed = 0
 
@@ -770,9 +768,6 @@ update do # Called 60 times per second
             if @turboSpearSent # Moves the spear that changes heart colour, also handles collission
                 @turboTimer = Time.now - @turboTimerStart
                 if @turboTimer >= 2
-
-                    p @turboSpear.x
-                    p @turboSpear.y
                     @turboSpear.x -= 10
                     @turboSpear.y += 10
                 end
