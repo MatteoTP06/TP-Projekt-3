@@ -882,12 +882,16 @@ end
 
 # Removes the previous highscore and replaces it with the current highscore.
 def SAVE_HIGHSCORE()
+    f = File.open(@saveDataFile)
     File.write(@saveDataFile, @recordTime.to_s)
+    f.close
 end
 
-# Removes highscore and replace it with 0
+# Removes highscore and replaces it with 0
 def RESET_HIGHSCORE()
-    File.truncate(@saveDataFile, 0)
+    f = File.open(@saveDataFile)
     File.write(@saveDataFile, "0")
+    f.close
 end
+
 show
