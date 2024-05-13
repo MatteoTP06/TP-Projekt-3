@@ -182,7 +182,7 @@ def INITIATE_VARIABLES()
     @hp = 20
     @multiplier = 1.0
     @damage = 0
-    @healing = 0
+    @healing = 3
     @inRow = 0
     @spearsFired = 0
     @distance = 500
